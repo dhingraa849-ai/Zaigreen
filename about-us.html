@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Zaigreen</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+
+
+    <style>
+        :root {
+            --primary-dark: #07373f;
+            --accent-green: #a7e4b9;
+            --bg-light: #f6f5f2;
+            --text-muted: #5a6b6d;
+            --bg-beige: #f5f3ee;
+
+        }
+
+        body,
+        html {
+            background-color: var(--bg-beige) !important;
+
+            overflow-x: clip !important;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+
+        header {
+            z-index: 99;
+            background-color: rgb(242, 238, 238);
+
+        }
+
+        .fa-shopping-cart {
+            color: #165861 !important;
+        }
+
+        .custom-navbar {
+            padding: 15px 20px;
+        }
+
+        h2,
+        h3,
+        h4,
+        h5 {
+
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            color: #1a3a38;
+        }
+
+        .active-1 {
+            color: #165861 !important;
+            border-bottom: solid 1px #143c41;
+        }
+
+        /* Dropdown Arrow Rotation Animation */
+        .arrow {
+            display: inline-block !important;
+            transition: transform 0.3s ease-in-out !important;
+        }
+
+        .rotate-up {
+            transform: rotate(180deg) !important;
+        }
+
+
+        .navbar-brand {
+            color: #143c41;
+            font-weight: 700;
+            font-size: 1.5rem;
+            align-items: center;
+            display: flex;
+            /* gap: 10px; */
+        }
+
+
+
+        .navbar-brand i {
+            color: var(--primary);
+        }
+
+        nav .nav-link {
+            color: #165861 !important;
+            font-size: 0.95rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+            font-weight: 600;
+            transition: 0.5s;
+        }
+
+        .dropdown-menu {
+            background-color: #143c41;
+            padding: 7px;
+            border-radius: 5px;
+            display: none;
+            transition: 0.5s;
+            color: #143c41 !important;
+        }
+
+
+
+        .dropdown-item {
+            color: white;
+            font-size: 14px;
+        }
+
+
+        .nav-link:hover {
+            color: #59e2a8 !important;
+            transform: translateX(2px);
+        }
+
+        .nav-icons i {
+            color: white;
+            margin-right: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .nav-icons i:hover {
+            color: var(--primary);
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 600;
+        }
+
+
+        .navbar-brand span {
+            font-size: 30px;
+            font-family: 'Poppins', sans-serif !important;
+            font-weight: 600;
+
+        }
+
+        .logo {
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+        }
+
+        .premium-menu-style {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.06);
+            padding: 0.75rem 0;
+        }
+
+        .premium-menu-style .dropdown-item {
+            padding: 0.6rem 1.5rem;
+            font-size: 0.95rem;
+            position: relative;
+            background: transparent !important;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .premium-menu-style .dropdown-item:hover {
+            color: #b9fdd5 !important;
+            transform: translateX(6px);
+        }
+
+        .offcanvas-title span {
+            font-weight: 700;
+        }
+
+
+
+        .offcanvas .offcanvas-title img {
+            border-radius: 50%;
+            height: 40px;
+            width: 40px;
+        }
+
+        .offcanvas .offcanvas-title span {
+            color: #b4f3ce;
+        }
+
+        .offcanvas .fa-shopping-cart {
+            color: #b4f3ce !important;
+        }
+
+        .offcanvas .active-1 {
+            color: #b4f3ce !important;
+            border-bottom: solid 1px #b4f3ce;
+        }
+
+        /* ==== End Navbar ==== */
+
+
+
+        .btn {
+            background-color: #143c41;
+            color: #b4f3ce;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            border: 2px solid transparent;
+            /* Layout shift rokne ke liye */
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(20, 60, 65, 0.4);
+            color: #143c41
+        }
+
+        /* Click karne par premium press effect */
+        .btn:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 5px rgba(20, 60, 65, 0.4);
+        }
+
+        /* Hero Section */
+        .about-hero {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .about-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* Image overlapping card style */
+        .floating-badge {
+            position: absolute;
+            bottom: -20px;
+            left: 20px;
+            background: white;
+            padding: 15px 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .floating-badge .icon-box {
+            background-color: var(--accent-green);
+            padding: 10px;
+            border-radius: 8px;
+            color: var(--primary-dark);
+        }
+
+        /* Core Values Section */
+        .values-section {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 80px 0;
+            border-radius: 40px;
+            margin: 40px 0;
+        }
+
+        .values-section h2 {
+            color: white;
+        }
+
+        .value-card {
+            border-left: 2px solid var(--accent-green);
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+
+
+        .team-img {
+            width: 100%;
+            border-radius: 16px;
+            object-fit: cover;
+            height: 250px;
+            margin-bottom: 15px;
+        }
+
+
+
+        .about-breadcrumb {
+            display: inline-flex;
+            background-color: #033040;
+            padding: 10px 24px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(7, 55, 63, 0.05);
+            /* Very subtle shadow */
+            margin-bottom: 25px;
+        }
+
+        .about-breadcrumb .breadcrumb {
+            margin-bottom: 0;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .about-breadcrumb .breadcrumb-item a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .about-breadcrumb .breadcrumb-item a:hover {
+            color: #b4f3ce;
+        }
+
+        .about-breadcrumb .breadcrumb-item.active {
+            color: #59e2a8;
+            font-weight: 700;
+        }
+
+        /* Custom Icon Separator */
+        .about-breadcrumb .breadcrumb-item+.breadcrumb-item::before {
+            content: "\F285";
+            font-family: "bootstrap-icons";
+            color: var(--accent-green);
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 0 12px;
+            vertical-align: middle;
+            margin-top: 3px;
+        }
+
+        .btn-custom-light {
+            transition: 0.5s;
+        }
+
+        .btn-custom-light:hover {
+            color: #033040;
+            background-color: #a3f7bf;
+            transform: translateX(-5px);
+        }
+
+        .btn {
+            background-color: #143c41;
+            color: #b4f3ce;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(20, 60, 65, 0.4);
+            color: #143c41
+        }
+
+        .btn:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 5px rgba(20, 60, 65, 0.4);
+        }
+
+
+        /* === Footer === */
+
+        footer {
+            padding-top: 100px;
+            padding-bottom: 30px;
+            background-color: #033040;
+            font-family: 'Poppins', sans-serif !important;
+        }
+
+        .input-filled {
+            width: 60%;
+            position: relative;
+        }
+
+
+
+        .input-filled input {
+            background-color: white;
+            padding: 20px;
+            border-radius: 50px;
+            border: none;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        .input-filled i {
+            background-color: #033040;
+            color: #a5f5c8;
+            padding: 13px;
+            border-radius: 50%;
+            margin-left: -60px;
+            font-size: 25px !important;
+            font-weight: 600;
+        }
+
+        footer a {
+            color: #8aafc0 !important;
+            text-decoration: none;
+            margin-bottom: 1.5rem;
+            font-size: 17px;
+            display: block;
+            font-weight: 500;
+            position: relative;
+            transition: color 1s ease, transform 1s ease, padding-left 0.5s ease !important;
+        }
+
+
+        footer a:hover {
+            color: #a5f5c8 !important;
+            padding-left: 14px;
+        }
+
+        footer a:hover::before {
+            transform: translateY(-50%) scaleY(1);
+        }
+
+        footer p {
+            color: #8aafc0 !important;
+            font-weight: 500;
+        }
+
+        footer .active {
+            color: #a3f7bf !important;
+        }
+
+        footer span {
+            color: white;
+            font-size: 22px;
+        }
+
+        .footer-bottom {
+            background-color: #a5f5c8;
+            padding: 20px;
+            border-radius: 10px;
+            padding-bottom: 50px;
+        }
+
+
+        .footer-bottom .footer-logo span {
+            font-weight: 600;
+            font-size: 35px !important;
+            margin-left: 10px;
+            color: #032b30;
+        }
+
+        .buttons button {
+            transition: 0.5s !important;
+        }
+
+        .buttons button:hover {
+            color: #a5f5c8;
+            transform: translateY(-5px);
+        }
+
+
+        .footer-bottom button {
+            background-color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            border: none;
+            margin-left: 8px;
+        }
+
+        .footer-bottom a {
+            text-decoration: underline;
+            display: inline;
+            color: #032b30 !important;
+
+        }
+
+        .footer-bottom span {
+            color: #032b30;
+            font-size: 16px !important;
+        }
+
+        .white {
+            color: white !important;
+        }
+
+        .mt-100 {
+            margin-top: 100px;
+        }
+
+        .blue {
+            color: #033040 !;
+        }
+
+        /* === End  Footer === */
+
+
+
+        .gradient-text {
+            background: linear-gradient(90deg, #ffff, #032b30, #c9fde7);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 4s linear infinite;
+            /* Makes the text shimmer */
+        }
+
+        @keyframes shine {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+
+
+
+
+
+        /* ======== Media Query =============
+        =========== Mobile responsive ====== */
+
+        @media (max-width: 415px) {
+
+            .input-filled {
+                width: 90%;
+            }
+        }
+
+        @media (min-width: 416px) and (max-width:576px) {
+            .input-filled {
+                width: 70%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .about-hero h1 {
+                font-size: 37px;
+                margin-top: 50px;
+            }
+
+            /* ==  Footer == */
+
+            
+            .ml {
+                margin-left: 0px !important;
+                padding-left: 0px !important;
+            }
+
+            .footer-bottom .text-end {
+                text-align: start !important;
+            }
+
+            .mtt-1 {
+                margin-top: 1rem;
+            }
+
+            .fs45 {
+                font-size: 37px !important;
+            }
+        }
+
+        @media (min-width: 577px) and (max-width:767px) {
+
+            .about-hero h1 {
+                font-size: 40px;
+                margin-top: 50px;
+            }
+
+            .fs45 {
+                font-size: 38px !important;
+            }
+
+            /* ==  Footer == */
+
+          
+
+            .ml {
+                margin-left: 0px !important;
+                padding-left: 0px !important;
+            }
+
+            .footer-bottom .text-end {
+                text-align: start !important;
+            }
+
+            .mtt-1 {
+                margin-top: 1rem;
+            }
+
+            /* === End footer  === */
+        }
+
+        @media (min-width: 768px) and (max-width:991px) {
+
+            .about-hero h1 {
+                font-size: 45px;
+                margin-top: 50px;
+            }
+
+            .fs45 {
+                font-size: 40px;
+            }
+
+            /* ==  footer == */
+
+            .tvmt-5 {
+                margin-top: 3rem;
+            }
+
+            .ml {
+                margin-left: 0px !important;
+                padding-left: 0px !important;
+            }
+
+            .mtt-1 {
+                margin-top: 1rem;
+            }
+
+        }
+
+        @media (max-width: 991px) {
+            .cards-wrapper {
+                justify-content: center;
+            }
+
+            .offcanvas-title span {
+                color: #9feeb5 !important;
+            }
+
+            .quote-card,
+            .panels-container,
+            .live-card {
+                margin-top: 20px;
+            }
+
+            .main-heading {
+                font-size: 2.8rem;
+            }
+
+            .offcanvas {
+                background-color: #033040;
+                border-left: none;
+                box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+            }
+
+            .custom-offcanvas-header {
+                background-color: #f4f8f4;
+                padding: 1.25rem 1.5rem;
+            }
+
+            .custom-offcanvas-header .text-success {
+                color: #20774b !important;
+            }
+
+            .custom-nav-item {
+                border-bottom: 1px solid #f0f0f0;
+            }
+
+            .custom-nav-item:last-child {
+                border-bottom: none;
+            }
+
+            .offcanvas-body .nav-link {
+                color: #a3f7bf !important;
+                /* Dark charcoal text */
+                padding: 16px 0;
+                font-size: 1.1rem;
+                transition: color 0.2s ease;
+            }
+
+            .offcanvas-body .nav-link.active-mobile {
+                color: #20774b !important;
+                position: relative;
+            }
+
+            .offcanvas-body .nav-link.active-mobile::after {
+                content: '';
+                position: absolute;
+                bottom: -1px;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: #20774b;
+            }
+
+            .dropdown-arrow {
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .nav-link.custom-toggle[aria-expanded="true"] .dropdown-arrow {
+                transform: rotate(180deg);
+                color: #20774b;
+            }
+
+            .offcanvas-body .dropdown-menu {
+                margin-top: 0;
+                border-radius: 0;
+            }
+
+            .custom-dropdown-item {
+                color: #4a5568 !important;
+                padding: 10px 0;
+                font-size: 1rem;
+                transition: padding-left 0.3s ease, color 0.3s ease;
+            }
+
+            .custom-dropdown-item:hover,
+            .custom-dropdown-item:focus {
+                background-color: transparent;
+                color: #20774b !important;
+                padding-left: 5px;
+            }
+
+            .btn-close:focus,
+            .navbar-toggler:focus,
+            .nav-link:focus {
+                box-shadow: none !important;
+                outline: none !important;
+            }
+
+            .dropdown-menu {
+                background-color: #143c41 !important;
+                padding: 7px 26px !important;
+                border-radius: 5px !important;
+                transition: 0.5s;
+                color: #143c41 !important;
+            }
+
+            .dropdown-item {
+                color: white;
+                font-size: 20px;
+            }
+
+            .dropdown-item:hover {
+                background-color: #a3f7bf;
+                color: #033040;
+            }
+        }
+
+        @media(min-width:992px) and (max-width:1200px) {
+
+
+            .about-hero h1 {
+                font-size: 45px;
+                margin-top: 50px;
+            }
+
+            /* -- Header -- */
+
+            .navbar-brand {
+                gap: 0px;
+            }
+
+            .navbar-brand span {
+                font-size: 25px;
+            }
+
+            /* --- footer --- */
+            footer .ms-5 {
+                margin-left: 0px !important;
+            }
+
+            footer .medium-btn {
+                margin-top: 10px;
+            }
+
+            .fs45 {
+                font-size: 40px !important
+            }
+        }
+
+        .fs45 {
+            font-size: 45px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="pt-3 sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg custom-navbar align-items-center">
+                <!-- Brand -->
+                <a class="navbar-brand d-flex align-items-center" href="./index.html">
+                    <img src="./assets/images/header-logo.png" alt="logo" class="logo me-2">
+                    <span class="">Zaigreen</span>
+                </a>
+
+                <!-- Mobile Toggler -->
+                <button class="navbar-toggler border-0 shadow-none blue" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <i class="fas fa-bars fs-3"></i>
+                </button>
+
+                <!-- Desktop Menu -->
+                <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link " href="./index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active-1" href="./about-us.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link " href="./project.html">Project</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link custom-toggle d-flex align-items-center" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Pages <i class="ri-arrow-down-s-line ms-1 arrow"></i>
+                            </a>
+
+                            <ul class="dropdown-menu premium-menu-style click-effect-menu">
+                                <li><a class="dropdown-item" href="./indoor-plants.html">Indoor Plants</a></li>
+                                <li><a class="dropdown-item" href="./outdoor-plants.html">Outdoor Plants</a></li>
+                                <li><a class="dropdown-item" href="./plants-care.html">Plant Care Kits</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="./blogs.html">Blogs</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center nav-icons">
+                        <a class="nav-link" href="./cart.html"><i class="fas fa-shopping-cart me-1"></i> Cart(0)</a>
+                        <a href="#" class="btn btn-primary-custom ms-4">Get a Quote</a>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Mobile Offcanvas Menu -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header border-bottom-custom">
+                    <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasNavbarLabel">
+                        <img src="./assets/images/logo.png" alt="logo" width="40px" class="me-2">
+                        <span class="text-white ">Zaigreen</span>
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column">
+                    <ul class="navbar-nav flex-grow-1 pe-3">
+                        <li class="nav-item"><a class="nav-link fs-5 " href="./index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5 active-1" href="./about-us.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="./project.html">Project</a></li>
+                        <li class="nav-item dropdown">
+
+                            <a class="nav-link custom-toggle d-flex align-items-center" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Pages <i class="ri-arrow-down-s-line ms-1 arrow"></i>
+                            </a>
+
+                            <ul class="dropdown-menu premium-menu-style click-effect-menu">
+                                <li><a class="dropdown-item" href="./indoor-plants.html">Indoor Plants</a></li>
+                                <li><a class="dropdown-item" href="./outdoor-plants.html">Outdoor Plants</a></li>
+                                <li><a class="dropdown-item" href="./plants-care.html">Plant Care Kits</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="./blogs.html">Blogs</a></li>
+                    </ul>
+
+                    <div class="mt-auto pb-4 pt-3 border-top-custom">
+                        <a class="nav-link text-white d-flex align-items-center mb-3 fs-5" href="./cart.html">
+                            <i class="fas fa-shopping-cart me-2"></i> Cart (0)
+                        </a>
+                        <a href="#" class="btn btn-primary-custom w-100 py-3 fw-bold text-uppercase rounded-3">Get a
+                            Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Hero Section with Premium Breadcrumb -->
+    <section class="about-hero container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+
+                <nav aria-label="breadcrumb" class="about-breadcrumb" data-aos="fade-up" data-aos-delay="200">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="index.html"><i class="bi bi-house-door-fill me-1"></i> Home</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                    </ol>
+                </nav>
+
+                <h1 class="mt-5 gradient-text" data-aos="fade-left" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1200" data-aos-delay="300">
+                    Cultivating Green Spaces, One Garden At A Time.</h1>
+                <p class="lead text-muted mt-4" data-aos="fade-right" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1200" data-aos-delay="300">We believe that every space has the potential to
+                    flourish. From tiny
+                    balcony planters to sprawling backyard landscapes, our mission is to connect people with the earth.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container py-5">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+                <h2 class="fs45 " data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200"
+                    data-aos-delay="300">Our Main Goal Is Grow The Gardening Journey</h2>
+                <p class="text-muted mt-3 mb-4" data-aos="fade-right" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1200" data-aos-delay="300">Founded on a deep-rooted passion for botany and
+                    sustainable living,
+                    Zaigreen started as a small community initiative and blossomed into a full-service landscaping and
+                    gardening hub. We don't just plant seeds; we nurture ecosystems.</p>
+                <a href="#" class="btn btn-custom-dark" data-aos="zoom-in" data-aos-delay="400">Learn More</a>
+            </div>
+            <div class="col-lg-6 offset-lg-1 position-relative">
+                <img src="./assets/images/Gardener.jpg" alt="Gardener" class="img-fluid rounded-4 shadow-sm"
+                    style="height: 500px; width: 100%; object-fit: cover;" data-aos="fade-left"
+                    data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="300">
+                <div class="floating-badge" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="icon-box">
+                        <i class="bi bi-tree-fill fs-4"></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-0">15+ Years</h5>
+                        <small class="text-muted">Of Green Expertise</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dark Values Section -->
+    <section class="container ">
+        <div class="values-section">
+            <div class="row px-4 px-lg-5">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h2 data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200">Rooted In
+                        Purpose, Driven By Nature.</h2>
+                    <p class="mt-3" style="color: #a0b3b5;" data-aos="fade-right" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="1200">Discover the core principles that guide everything we do in
+                        the garden and beyond.</p>
+                    <button class=" btn btn-custom-light  mt-3" data-aos="zoom-in" data-aos-delay="400">Our
+                        Practices</button>
+                </div>
+                <div class="col-lg-7 offset-lg-1">
+                    <div class="row">
+                        <div class="col-md-6 value-card" data-aos="fade-up" data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1200">
+                            <h4 class="text-white">Sustainability First</h4>
+                            <p style="color: #a0b3b5;">We use eco-friendly materials and advocate for native planting to
+                                protect local ecosystems.</p>
+                        </div>
+                        <div class="col-md-6 value-card" data-aos="fade-left" data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1200">
+                            <h4 class="text-white">Community Growth</h4>
+                            <p style="color: #a0b3b5;">Gardening brings people together. We actively support community
+                                gardens and local farming.</p>
+                        </div>
+                        <div class="col-md-6 value-card" data-aos="fade-up" data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1200">
+                            <h4 class="text-white">Expert Curation</h4>
+                            <p style="color: #a0b3b5;">Every plant, tool, and technique is tested and approved by our
+                                master botanists.</p>
+                        </div>
+                        <div class="col-md-6 value-card" data-aos="fade-left" data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1200">
+                            <h4 class="text-white">Continuous Learning</h4>
+                            <p style="color: #a0b3b5;">Nature is always evolving, and so are we. We constantly update
+                                our methods and advice.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="container py-5 text-center">
+        <h2 class="mb-5 fs45 gradient-text" data-aos="fade-up" data-aos-easing="ease-out-cubic"
+            data-aos-duration="1200">The Best
+            Faces<br>Behind The Flowers.</h2>
+        <div class="row g-4">
+            <div class="col-md-4 col-sm-6" data-aos="fade-right" data-aos-easing="ease-out-cubic"
+                data-aos-duration="1200">
+                <img src="./assets/images/Team Member-1.jpg" alt="Team Member" class="team-img shadow-sm">
+                <h5>Sarah Jenkins</h5>
+                <p class="text-muted small">Lead Botanist</p>
+            </div>
+            <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1200">
+                <img src="assets/images/team-memeber2.jpg" alt="Team Member" class="team-img shadow-sm">
+                <h5>David Alaba</h5>
+                <p class="text-muted small">Landscape Architect</p>
+            </div>
+            <div class="col-md-4 col-sm-6" data-aos="fade-left" data-aos-easing="ease-out-cubic"
+                data-aos-duration="1200">
+                <img src="https://images.unsplash.com/photo-1611558709798-e009c8fd7706?auto=format&fit=crop&w=400&q=80"
+                    alt="Team Member" class="team-img shadow-sm">
+                <h5>Elena Rostova</h5>
+                <p class="text-muted small">Horticulture Specialist</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center p-5 rounded-4"
+                style="background: url('https://images.unsplash.com/photo-1558904541-efa843a96f09?auto=format&fit=crop&w=1200&q=80') center/cover; position: relative;">
+                <!-- Dark overlay -->
+                <div
+                    style="position: absolute; top:0; left:0; right:0; bottom:0; background: #07373f; border-radius: 1rem;">
+                </div>
+
+                <div class="position-relative z-index-1 py-5">
+                    <h2 class="text-white mb-4" data-aos="zoom-in-down" data-aos-easing="ease-out-back"
+                        data-aos-duration="1200" data-aos-delay="150">Bring Your Green Dreams<br>To Life With Us.</h2>
+                    <a href="#" class="btn btn-custom-light" data-aos="zoom-in-up" data-aos-easing="ease-out-back"
+                        data-aos-duration="1200" data-aos-delay="150">Contact Us Today</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12  col-md-12 col-lg-6 col-xl-6 " data-aos="fade-right"
+                    data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="300">
+                    <span class="white fs-4 mbt-5 ">NewSletter</span>
+                    <div class="input-filled mt-3">
+                        <input type="text" placeholder="Enter your Email...">
+                        <i class="ri-arrow-right-up-line"></i>
+                    </div>
+                    <p class="gray mt-4">Stay Tuned And Subcribe to Our <br> Newslatter. </p>
+                </div>
+
+
+                <div class=" col-6 col-sm-6   col-md-4 col-lg-2  col-xl-2 tvmt-5" data-aos="fade-up"
+                    data-aos-easing="ease-out-cubic" data-aos-duration="1200">
+                    <h2 class="white mb-5 mbt-5 ">Main Pages</h2>
+
+                    <a href="./index.html" data-aos="fade-up" data-aos-delay="200"> Home</a>
+                    <a href="./about-us.html" class="active" data-aos="fade-up" data-aos-delay="200">About Us</a>
+                    <a href="./project.html" data-aos="fade-up" data-aos-delay="200">Projects</a>
+                    <a href="./contect.html" data-aos="fade-up" data-aos-delay="200">Contect </a>
+                    <a href="./services.html" data-aos="fade-up" data-aos-delay="200">Services </a>
+                    <a href="./blogs.html" data-aos="fade-up" data-aos-delay="200">Blog </a>
+                </div>
+
+                <div class=" col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2 tvmt-5" data-aos="fade-up"
+                    data-aos-easing="ease-out-cubic" data-aos-duration="1200">
+                    <h2 class="white mb-5 mbt-5 ">Company</h2>
+
+                    <a href="./indoor-plants.html" data-aos="fade-up" data-aos-delay="200"> Indoor Plants </a>
+                    <a href="./outdoor-plants.html" data-aos="fade-up" data-aos-delay="200">Outdoor Plants</a>
+                    <a href="./plants-care.html" data-aos="fade-up" data-aos-delay="200">Plant Care kits </a>
+                    <a href="#" data-aos="fade-up" data-aos-delay="200">Pricing Single </a>
+                    <a href="#" data-aos="fade-up" data-aos-delay="200">Projects </a>
+                    <a href="#" data-aos="fade-up" data-aos-delay="200">Project Single </a>
+                </div>
+
+                <div class=" col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2 tvmt-5 " data-aos="fade-left"
+                    data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="300">
+                    <h2 class="white mb-5 mbt-5 ">Templetes</h2>
+
+                    <a href="#" data-aos="fade-up" data-aos-delay="200"> 404 Not Found</a>
+                    <a href="#" data-aos="fade-up" data-aos-delay="200">Password Protected </a>
+                    <a href="#" data-aos="fade-up" data-aos-delay="200">Changelog </a>
+                    <a href="#" data-aos="fade-up" data-aos-delay="200">Licence</a>
+                    <a href="#" data-aos="fade-up" data-aos-delay="200">Style Guide </a>
+                </div>
+
+
+                <div class="col-md-6 col-lg-4 mt-100" data-aos="zoom-in" data-aos-delay="400">
+                    <p>Email Us</p>
+                    <span>info.zaigreen@gmail.com</span>
+                </div>
+
+
+                <div class="col-md-6 col-lg-4  mt-100" data-aos="zoom-in" data-aos-delay="400">
+                    <p>Location</p>
+                    <span>174 Streel Charleston , New Work</span>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mt-100 " data-aos="zoom-in" data-aos-delay="400">
+
+                    <p class="ms-5 ps-5 ml"> Call us Now </p>
+                    <span class="ms-5 ps-5 ml">(+880) 89993 88750</span>
+                </div>
+
+                <div class="footer-bottom mt-100">
+                    <div class="footer-logo mt-4 d-flex align-items-center">
+                        <img src="assets/images/footer-logo.png" alt="logo" width="50px"
+                            class="logo"><span>Zaigreen</span>
+                    </div>
+                    <div class="row mt-5">
+
+                        <div class="col-md-6 buttons">
+                            <button>Facebook</button>
+                            <button>Instagram</button>
+                            <button class="mtt-1">Linkedin</button>
+                            <button class=" medium-btn mtt-1 ">Medium</button>
+                        </div>
+
+                        <div class="col-md-6 text-end mtt-1">
+                            <span>Copyright - Zaigreen | Designed by <a href="#">Flowzai /</a></span><a
+                                href="#">Licenseing</a> <br>
+                            <span>-Powered by <a href="#">Webflow </a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+
+
+<script>
+
+    //===  fade animations === //
+    AOS.init({
+        duration: 1000,
+        once: false,
+        offset: 50,
+        easing: 'ease-in-out-back'
+    });
+
+
+    //===  fade animations === //
+
+
+
+    // === Header arrow  === //
+    $(document).ready(function () {
+        $('.dropdown').click(function () {
+            $('.dropdown-list').toggle();
+
+            $(this).find('.arrow').toggleClass('rotate-up');
+        });
+    });
+
+
+
+
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Zaigreen</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Connect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Import Inter (Weights 500 and 600 for optimal matching) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    
+    <div class="container-fluid">
+        <div class="top-background">
+
+            <!-- Header -->
+            <header class="pt-3 sticky-top">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg custom-navbar align-items-center">
+                        <!-- Brand -->
+                        <a class="navbar-brand d-flex align-items-center" href="./index.html">
+                            <img src="./assets/images/header-logo.png" alt="logo" class="logo me-2">
+                            <span class="">Zaigreen</span>
+                        </a>
+                        
+                        <!-- Mobile Toggler -->
+                        <button class="navbar-toggler border-0 shadow-none text-white" type="button"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                            aria-controls="offcanvasNavbar">
+                            <i class="fas fa-bars fs-3"></i>
+                        </button>
+            
+                        <!-- Desktop Menu -->
+                        <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarNav">
+                            <ul class="navbar-nav mx-auto">
+                                <li class="nav-item"><a class="nav-link active-1" href="./index.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="./about-us.html">About Us</a></li>
+                                <li class="nav-item"><a class="nav-link " href="./project.html">Project</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link custom-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Pages <i class="ri-arrow-down-s-line ms-1 arrow"></i>
+                                    </a>
+                                    
+                                    <ul class="dropdown-menu premium-menu-style click-effect-menu">
+                                        <li><a class="dropdown-item" href="./indoor-plants.html">Indoor Plants</a></li>
+                                        <li><a class="dropdown-item" href="./outdoor-plants.html">Outdoor Plants</a></li>
+                                        <li><a class="dropdown-item" href="./plants-care.html">Plant Care Kits</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="./blogs.html">Blogs</a></li>
+                            </ul>
+                            <div class="d-flex align-items-center nav-icons">
+                                <a class="nav-link" href="./cart.html"><i class="fas fa-shopping-cart me-1"></i> Cart(0)</a>
+                                <a href="#" class="btn btn-primary-custom ms-4">Get a Quote</a>
+                            </div>
+                        </div>
+                    </nav>
+            
+                    <!-- Mobile Offcanvas Menu -->
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header border-bottom-custom">
+                            <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasNavbarLabel">
+                                <img src="./assets/images/logo.png" alt="logo" width="40px" class="me-2"> 
+                                <span class="text-white ">Zaigreen</span>
+                            </h5>
+                            <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body d-flex flex-column">
+                            <ul class="navbar-nav flex-grow-1 pe-3">
+                                <li class="nav-item"><a class="nav-link fs-5 active-1" href="./index.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link fs-5" href="./about-us.html">About Us</a></li>
+                                <li class="nav-item"><a class="nav-link fs-5" href="./project.html">Project</a></li>
+                                <li class="nav-item dropdown">
+
+                                    <a class="nav-link custom-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Pages <i class="ri-arrow-down-s-line ms-1 arrow"></i>
+                                    </a>
+                                    
+                                    <ul class="dropdown-menu premium-menu-style click-effect-menu">
+                                        <li><a class="dropdown-item" href="./indoor-plants.html">Indoor Plants</a></li>
+                                        <li><a class="dropdown-item" href="./outdoor-plants.html">Outdoor Plants</a></li>
+                                        <li><a class="dropdown-item" href="./plants-care.html">Plant Care Kits</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link fs-5" href="./blogs.html">Blogs</a></li>
+                            </ul>
+                            
+                            <div class="mt-auto pb-4 pt-3 border-top-custom">
+                                <a class="nav-link text-white d-flex align-items-center mb-3 fs-5" href="./cart.html">
+                                    <i class="fas fa-shopping-cart me-2"></i> Cart (0)
+                                </a>
+                                <a href="#" class="btn btn-primary-custom w-100 py-3 fw-bold text-uppercase rounded-3">Get a Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- End Header -->
+
+            <!-- hero Section -->
+            <section class="hero">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12 col-xl-8 mt-5 pt-5 mpt-0">
+                            <h2 class="fs50 gradient-text" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1200">Where Green Thumbs <br> Begin & Gardens Flourish.</h2>
+                        </div>
+                        <div class="col-md-12 col-lg-8 col-xl-4  mt-5 pt-5 mpt-0">
+                            <p data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="300" class="mvfs18">Imagine stepping into your perfect garden , full of vibrant flowers, thriving vegetable
+                                and lush greenery with our expext with our expert advice.</p>
+                            <div class="button mt-5" data-aos="zoom-in" data-aos-delay="400">
+                                <a href="./about-us.html" class="btn-2 " >Discover More</a>
+                            </div>
+                        </div>
+
+                        <div class="row text-center process-row position-relative">
+
+                            <div class="connecting-line"></div>
+
+                            <div class="col-md-3 mt-5 pt-5" data-aos="zoom-in" data-aos-delay="400">
+                                <div class="hero-icon"   >
+                                    <img src="assets/images/sprout.png" alt="Discovery" width="30">
+                                </div>
+                                <p class="fs18 mt-4 ">Discovery & Consultation</p>
+                            </div>
+
+                            <div class="col-md-3 mt-5 pt-5" data-aos="zoom-in" data-aos-delay="400">
+                                <div class="hero-icon" >
+                                    <img src="assets/images/plant.png" alt="Native Plant" width="30">
+                                </div>
+                                <p class="fs18 mt-4 ">Native Plant Integration</p>
+                            </div>
+
+                            <div class="col-md-3 mt-5 pt-5" data-aos="zoom-in" data-aos-delay="400">
+                                <div class="hero-icon" >
+                                    <img src="assets/images/water.png" alt="Water Efficient" width="30"
+                                        class="img-black">
+                                </div>
+                                <p class="fs18 mt-4 ">Water-Efficient Irrigation</p>
+                            </div>
+
+
+                            <div class="col-md-3 mt-5 pt-5 " data-aos="zoom-in" data-aos-delay="400">
+                                <div class="hero-icon" >
+                                    <img src="assets/images/agricultural-machinery.png" alt="Maintenance" width="30"
+                                        class="img-black">
+                                </div>
+                                <p class="fs18 mt-4 ">Ongoing Maintenance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </section>
+        <!-- End Hero section -->
+
+
+        <!-- Greener Tomorrow  -->
+        <section class="Greener-tomorrow">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 mt-5">
+                        <div class="banner-img" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1200">
+                            <img src="assets/images/banner-image.png" alt="" width="100%">
+                        </div>
+                    </div>
+                    <p class="text-center fs20 mt-5 pt-5 mpt-0" data-aos="fade-up" data-aos-delay="200">Our Commitment to Collaboration for a <br> Greener Tomorrow
+                        with gardening.</p>
+
+                </div>
+            </div>
+
+      <!-- greener Scroll Slider -->
+            <div class="container-fluid py-5 overflow-hidden  position-relative slider-container">
+                <div class="greener-slider">
+                    <div class="greener-track">
+
+                        <div class="greener-group">
+                            <div class="greener-item">
+                                <div class="brand-card d-flex align-items-center gap-3">
+                                    <img src="assets/images/camrea.png" alt="Camera">
+                                    <h5 class="mb-0">Camera</h5>
+                                </div>
+                            </div>
+                            <div class="greener-item">
+                                <div class="brand-card d-flex align-items-center gap-3">
+                                    <img src="./assets/images/signal.png" alt="Marketly">
+                                    <h5 class="mb-0">Marketly</h5>
+                                </div>
+                            </div>
+                            <div class="greener-item">
+                                <div class="brand-card d-flex align-items-center gap-3">
+                                    <img src="assets/images/coding.png" alt="Codelify">
+                                    <h5 class="mb-0">Codelify</h5>
+                                </div>
+                            </div>
+                            <div class="greener-item">
+                                <div class="brand-card d-flex align-items-center gap-3">
+                                    <img src="./assets/images/nature.png" alt="Natural">
+                                    <h5 class="mb-0">Natural</h5>
+                                </div>
+                            </div>
+                            <div class="greener-item">
+                                <div class="brand-card d-flex align-items-center gap-3">
+                                    <img src="./assets/images/doctorly.png" alt="Doctorly">
+                                    <h5 class="mb-0">Doctorly</h5>
+                                </div>
+                            </div>
+                            <div class="greener-item">
+                                <div class="brand-card d-flex align-items-center gap-3">
+                                    <img src="./assets/images/Arc.png" alt="Architect">
+                                    <h5 class="mb-0">Architect</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="greener-group">
+                            <div class="greener-item">
+                                <div class="brand-card d-flex align-items-center gap-3">
+                                    <img src="assets/images/camrea.png" alt="Camera">
+                                    <h5 class="mb-0">Camera</h5>
+                                </div>
+                            </div>
+                            <div class="greener-item">
+                                <div class="brand-card d-flex align-items-center gap-3">
+                                    <img src="./assets/images/signal.png" alt="Marketly">
+                                    <h5 class="mb-0">Marketly</h5>
+                                </div>
+                            </div>
+                            <div class="greener-item">
+                                <div class="brand-card d-flex align-items-center gap-3">
+                                    <img src="assets/images/coding.png" alt="Codelify">
+                                    <h5 class="mb-0">Codelify</h5>
+                                </div>
+                            </div>
+                            <div class="greener-item">
+                                <div class="brand-card d-flex align-items-center gap-3">
+                                    <img src="./assets/images/nature.png" alt="Natural">
+                                    <h5 class="mb-0">Natural</h5>
+                                </div>
+                            </div>
+                            <div class="greener-item">
+                                <div class="brand-card d-flex align-items-center gap-3">
+                                    <img src="./assets/images/doctorly.png" alt="Doctorly">
+                                    <h5 class="mb-0">Doctorly</h5>
+                                </div>
+                            </div>
+                            <div class="greener-item">
+                                <div class="brand-card d-flex align-items-center gap-3">
+                                    <img src="./assets/images/Arc.png" alt="Architect">
+                                    <h5 class="mb-0">Architect</h5>
+                                </div>
+                            </div>
+
+
+
+                            <div class="greener-item">
+                                <div class="brand-card d-flex align-items-center gap-3">
+                                    <img src="assets/images/camrea.png" alt="Camera">
+                                    <h5 class="mb-0">Camera</h5>
+                                </div>
+                            </div>
+                            <div class="greener-item">
+                                <div class="brand-card d-flex align-items-center gap-3">
+                                    <img src="./assets/images/signal.png" alt="Marketly">
+                                    <h5 class="mb-0">Marketly</h5>
+                                </div>
+                            </div>
+                            <div class="greener-item">
+                                <div class="brand-card d-flex align-items-center gap-3">
+                                    <img src="assets/images/coding.png" alt="Codelify">
+                                    <h5 class="mb-0">Codelify</h5>
+                                </div>
+                            </div>
+                            <div class="greener-item">
+                                <div class="brand-card d-flex align-items-center gap-3">
+                                    <img src="./assets/images/nature.png" alt="Natural">
+                                    <h5 class="mb-0">Natural</h5>
+                                </div>
+                            </div>
+                            <div class="greener-item">
+                                <div class="brand-card d-flex align-items-center gap-3">
+                                    <img src="./assets/images/doctorly.png" alt="Doctorly">
+                                    <h5 class="mb-0">Doctorly</h5>
+                                </div>
+                            </div>
+                            <div class="greener-item">
+                                <div class="brand-card d-flex align-items-center gap-3">
+                                    <img src="./assets/images/Arc.png" alt="Architect">
+                                    <h5 class="mb-0">Architect</h5>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- About us -->
+        <section class="about-us">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-xl-6   mt-5">
+                        <p class="fs18 tx" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="300">// About us</p>
+                        <h2 class="fs45 tx gradient-text"data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="300" >Our Main Goal is Grow <br> The Garening Journey.</h2>
+                        <div class="row">
+                            <div class="col-md-6 col-lg-5 " data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="300">
+                                <div class="about-content">
+                                    <div class="bg-ltgreen">
+                                        <p class="text-center ">Project</p>
+                                        <div class="card p-1">
+                                            <img src="assets/images/seed-plant.png" alt="seeds">
+                                            <h2 > <span class="fs45 ms-3 counter " data-target="450"> 0</span> +</h2>
+                                            <p class="ms-3">Woldwide over 440 <br> Completed project</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6 col-lg-7 mt-5 pt-5" >
+                                <p data-aos="fade-up" data-aos-delay="200">We belive that gardending is more than just planting seeds; its's about nuturing
+                                    life,
+                                    fostering connetions,and creating spaces that inspire . from small urban balconis to
+                                    sprawling backyard oases, misson is to empower everyone.</p>
+                                <a href="./about-us.html" class="btn" data-aos="zoom-in" data-aos-delay="400">More About Us</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- about right  -->
+                    <div class="col-md-12 col-lg-12 col-xl-6   mbt-5">
+                        <div class="about-img"  data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="300">
+                            <img src="./assets/images/about-us.png" alt="" width="100%" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </section>
+
+    <!-- End About us -->
+
+
+    <!-- Services -->
+    <Section class="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-8"  data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="300">
+                    <p class="fs18">// Services</p>
+                    <h2 class="fs45 gradient-text">From Planning to Planting:<br> We veGot You Covred.</h2>
+                </div>
+
+                <div class="col-md-12 col-lg-4 mt-4 ">
+                    <p  class="mvfs18" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="300">We believe that gardening is more than just planting seeds; it about nurturing life </p>
+                    <a href="./services.html" class="btn" data-aos="zoom-in" data-aos-delay="400">Explore All Services</a>
+                </div>
+
+                <div class="border-bottom mt-5 "></div>
+
+                <!-- tab section -->
+
+                <div class="tab-section ">
+                    <div class="row align-items-center">
+
+                        <div class="col-md-12 col-lg-3"  data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="300">
+                            <img id="left-display-img" src="assets/images/landscape-left.jpg" alt="Left View"
+                                class="img-fluid rounded-4">
+                        </div>
+
+                        <div class="col-md-12 col-lg-6  text-center sr-center p-5">
+
+                            <div class="service-content  mb-4" data-left-img="./assets/images/landscape-left.jpg"
+                                data-right-img="./assets/images/landscape-right.jpg" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1200">
+
+                                <div class="active-corner-icon" >
+                                    <img src="assets/images/gardening-tools.png" alt="">
+                                </div>
+
+                                <h2 class="green ">Landscape Design</h2>
+                                <p class="fs17">Starting a garden can feel overwhelming, but with <br> the right
+                                    approach, anyone can grow.</p>
+                            </div>
+
+                            <div class="service-content active-tab mb-4 "
+                                data-left-img="./assets/images/maintenance-left.jpg"
+                                data-right-img="./assets/images/maintenance-right.jpg" data-aos="fade-up" data-aos-delay="200">
+
+                                <div class="active-corner-icon">
+                                    <img src="assets/images/gardening-tools.png" alt="">
+                                </div>
+
+                                <h2 class="green gradient-text">Garden Maintenance</h2>
+                                <p class="fs17">We believe that gardening is more than just <br> planting seeds,
+                                    it's about nurturing.</p>
+                            </div>
+
+                            <div class="service-content mb-4" data-left-img="./assets/images/seasonal-left.jpg"
+                                data-right-img="./assets/images/seasonal-right.jpg" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1200">
+
+                                <div class="active-corner-icon">
+                                    <img src="assets/images/gardening-tools.png" alt="">
+                                </div>
+
+
+                                <h2 class="green">Seasonal Services</h2>
+                                <p class="fs17">Incorporate a mix of flowers that bloom at different<br> times to
+                                    ensure food availability year-round.</p>
+                            </div>
+
+                            <div class="service-content mb-4" data-left-img="./assets/images/hardscape-left.jpg"
+                                data-right-img="./assets/images/hardscape-right.jpg" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1200">
+
+                                <div class="active-corner-icon">
+                                    <img src="assets/images/gardening-tools.png" alt="">
+                                </div>
+
+                                <h2 class="green">Hardscape Design</h2>
+                                <p class="fs17">Bed gardening offers numerous advantages, <br> from improved soil
+                                    drainage to easier weed control.</p>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-12 col-lg-3"  data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="300">
+                            <img id="right-display-img" src="assets/images/landscape-right.jpg" alt="Right View"
+                                class="img-fluid rounded-4 ">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+    </Section>
+    <!--  End Servies -->
+
+
+    <!-- Why Choose us -->
+    <section class="choose-us">
+        <div class="container">
+            <div class="row">
+                <p class="fs18 text-center" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="300">// Why Choose Us</p>
+                <h2 class="text-center fs45 gradient-text" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="300" >Rooted in Naturem Driven <br> by Purpose: The Storyof Our
+                    <br> Gardening
+                    Adventure</h2>
+
+                <div class="col-md-10 col-lg-6 col-xl-3 mt-5">
+                    <p data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="0">We' re More then just gardening ressource we 're partners in growth.our journey started with a
+                        passion of plants. </p>
+
+                    <a href="./indoor-plants.html" class="btn" data-aos="zoom-in-up" data-aos-easing="ease-out-back" data-aos-duration="1200" data-aos-delay="150"> More About Us</a>
+
+                    <div class="choose-left-content mt-5">
+
+                        <div class="d-flex gap-3 py-4 border-bottom" data-aos="zoom-in-down" data-aos-easing="ease-out-back" data-aos-duration="1200" data-aos-delay="300">
+                            <h2 class="fs40 ms-3" >440+</h2>
+                            <p class="mt-4">Completed Project</p>
+                        </div>
+
+                        <div class="d-flex gap-3 py-4 border-bottom"  data-aos="zoom-in-down" data-aos-easing="ease-out-back" data-aos-duration="1200" data-aos-delay="300">
+                            <h2 class="fs40 ms-3">02M+</h2>
+                            <p class="mt-4">Happy Customers</p>
+                        </div>
+
+                        <div class="d-flex gap-3 py-4" data-aos="zoom-in-down" data-aos-easing="ease-out-back" data-aos-duration="1200" data-aos-delay="300">
+                            <h2 class="fs40 ms-3">2015</h2>
+                            <p class="mt-4">10 Years of Experince</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-lg-6 col-xl-7 position-realtive mt-5">
+
+                    <div class="choose-center-content position-relative rounded-4 overflow-hidden mb-5" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1200">
+
+                        <img src="./assets/images/planting-img.jpg" alt="" width="100%" height="530px"
+                            class="object-fit-cover img-h">
+
+                        <div class="floting-estimate-card bg-white rounded-4 shadow p-3 p-md-4 d-flex align-items-center me-3 me-md-4"  >
+
+                            <div id="dynamic-content-area" class="d-flex align-items-center flex-grow-1 w-100" data-aos="fade-up" data-aos-delay="200">
+                                <div class="estimate-icon bg-light-green flex-shrink-0 d-flex justify-content-center me-3 me-md-4 align-items-center" >
+                                    <i id="card-icon" class="fas fa-calculator fs-3 dark-green-text"></i>
+                                </div>
+
+                                <div class="flex-grow-1">
+                                    <h3 id="card-title" class="dark-green-text fw-bold fs-5 mb-1">Detailed Estimate</h3>
+                                    <p id="card-desc" class="text-muted mb-0  lh-sm">
+                                        Our services are designed to meet diverse need of individuals, businesses, and
+                                        communties.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="slider-dots flex-shrink-0 d-flex flex-column justify-content-center gap-2 ms-4 ps-3 border-start border-2" data-aos="fade-up" data-aos-delay="200">
+
+                                <span class="dot active" data-title="Detaild Estimate"
+                                    data-desc="Our services are you designed to meet diverse need to indidualas, businessses, and communities."
+                                    data-icon="fa-calculator">
+                                </span>
+
+                                <span class="dot" data-title="Eco Gardening"
+                                    data-desc="We create sustainable environments that thrive with minimal ecologicalfootprint."
+                                    data-icon="fa-leaf"></span>
+                                </span>     
+                                <span class="dot" data-title="Smart Watering"
+                                    data-desc="Automated irrigation systems that save water and keep your garden always fresh."
+                                    data-icon="fa-faucet-drip"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-lg-6 col-xl-2 mt-5">
+                    <div class="choose-right-img" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="300">
+                        <img src="assets/images/hand-plant.jpg" alt="" width="100%" class="img-h-2 object-fit-cover rounded-3" height="250px" width="100%">
+                    </div>
+
+                </div>
+            </div>
+    </section>
+    <!-- End Why Choose us -->
+
+    <!-- Recent Project -->
+    <section class="recent-project">
+        <div class="container">
+            <p class="fs18 text-center " data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="300">// Recent Project</p>
+            <h2 class="text-center mt-3 fs45 gradient-text"  data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="300">Our Green Masterpieces:   <br>  Gardens That Inspire. </h2>
+            <p class="text-center mbt-5" data-aos="fade-up" data-aos-delay="200">Garden tree has blossomed into a leading company dedicated to <br> providing
+                innovative
+                solutions for garding. </p>
+        </div>
+
+        <!-- Project Slider -->
+        <div class="project-container container-fluid overflow-hidden py-5">
+            <div class="project-slider d-flex gap-4">
+                <div class="project-card rounded-4 p-4 p-md-5"  data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="300">
+
+                    <div class="d-flex flex-column flex-md-row justify-content-between gap-4" >
+                        <div class="card-left-content " >
+                            <span class="text-light-green fw-bold ">[01]</span>
+                            <h3 class="white mt-2 mb-4 fs-4 fw-bold lh-base">
+                                Terrace Transform:<br>Vertical Gardening<br>at Its Best
+                            </h3>
+
+                            <div class="garden-logo-icon-small">
+                                <img src="./assets/images/lotus-icon.png" alt="" width="50%">
+                            </div>
+                        </div>
+
+                        <div class="card-right-image flex-shrink-0">
+                            <img src="./assets/images/project-2.jpg" alt="Project Image"
+                                class="rounded-4 object-fit-cover">
+                        </div>
+                    </div>
+                    <p class="description-text mt-5 mb-4 pe-md-4 white">
+                        Starting a garden can feel overwhelming, but with <br> the right approach, anyone can grow a
+                        lush, thriving space.
+                    </p>
+
+                    <hr class="card-divider">
+
+                    <div class="d-flex  flex-sm-row justify-content-between align-items-start align-items-sm-center mt-4 gap-3 gap-sm-0" >
+                        <div class="meta-data">
+                            <span class="d-block meta-title mb-1">Location</span>
+                            <span class="d-block white fw-bold">Chicago, IL</span>
+                        </div>
+                        <div class="meta-data">
+                            <span class="d-block meta-title mb-1">Time Duration</span>
+                            <span class="d-block white fw-bold">8 Months</span>
+                        </div>
+                        <div class="meta-data">
+                            <span class="d-block meta-title mb-1">Square Meters</span>
+                            <span class="d-block white fw-bold">120,00m&sup2;</span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="project-card rounded-4 p-4 p-md-5" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1200">
+
+                    <div class="d-flex flex-column flex-md-row justify-content-between gap-4">
+                        <div class="card-left-content">
+                            <span class="text-light-green fw-bold ">[02]</span>
+                            <h3 class="white mt-2 mb-4 fs-4 fw-bold lh-base">
+                                The Secret Garden:<br> Crafting a Serence <br> Hideaway.
+                            </h3>
+
+                            <div class="garden-logo-icon-small">
+                                <img src="./assets/images/lotus-icon.png" alt="" width="50%">
+
+                            </div>
+                        </div>
+
+                        <div class="card-right-image flex-shrink-0">
+                            <img src="./assets/images/project-3.jpg" alt="Project Image"
+                                class="rounded-4 object-fit-cover">
+                        </div>
+                    </div>
+
+                    <p class="description-text mt-5 mb-4 pe-md-4 white">
+                        Pollinators like bees, butterfiles, and birds play a crucial role in <br> keeping gardens
+                        thriving. to create a pollinator haven.
+                    </p>
+
+                    <hr class="card-divider">
+
+                    <div class="d-flex justify-content-between align-items-center" >
+                        <div class="meta-data">
+                            <span class="d-block meta-title mb-1">Location</span>
+                            <span class="d-block white fw-bold">Malibu, Beach, CA</span>
+                        </div>
+                        <div class="meta-data">
+                            <span class="d-block meta-title mb-1">Time Duration</span>
+                            <span class="d-block white fw-bold">7 Months</span>
+                        </div>
+                        <div class="meta-data">
+                            <span class="d-block meta-title mb-1">Square Meters</span>
+                            <span class="d-block white fw-bold">110,00m&sup2;</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="project-card rounded-4 p-4 p-md-5"  data-aos="slide-left" data-aos-easing="ease-out-quart" data-aos-duration="1000" data-aos-delay="300">
+
+                    <div class="d-flex flex-column flex-md-row justify-content-between gap-4">
+                        <div class="card-left-content">
+                            <span class="text-light-green fw-bold ">[03]</span>
+                            <h3 class="white mt-2 mb-4 fs-4 fw-bold lh-base">
+                                Bloom Haven:A<br>Backyard Retreat in<br>Full Color.
+                            </h3>
+
+                            <div class="garden-logo-icon-small">
+                                <img src="./assets/images/lotus-icon.png" alt="" width="50%">
+
+                            </div>
+                        </div>
+
+                        <div class="card-right-image flex-shrink-0">
+                            <img src="./assets/images/project-4.jpg" alt="Project Image"
+                                class="rounded-4 object-fit-cover">
+                        </div>
+                    </div>
+
+                    <p class="description-text mt-5 mb-4 pe-md-4 white">
+                        This Project was a comprehensive trasformation of an outdoor <br> space into a serene and
+                        functionl garden.
+                    </p>
+
+                    <hr class="card-divider">
+
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                        <div class="meta-data">
+                            <span class="d-block meta-title mb-1">Location</span>
+                            <span class="d-block white fw-bold">Los Angeles,CA</span>
+                        </div>
+                        <div class="meta-data">
+                            <span class="d-block meta-title mb-1">Time Duration</span>
+                            <span class="d-block white fw-bold">11 Months</span>
+                        </div>
+                        <div class="meta-data">
+                            <span class="d-block meta-title mb-1">Square Meters</span>
+                            <span class="d-block white fw-bold">162,00m&sup2;</span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="project-card rounded-4 p-4 p-md-5">
+
+                    <div class="d-flex flex-column flex-md-row justify-content-between gap-4">
+                        <div class="card-left-content">
+                            <span class="text-light-green fw-bold fs-6">[04]</span>
+                            <h3 class="white mt-2 mb-4 fs-4 fw-bold lh-base">
+                                Garden Retreat: A<br> Space for coolness <br>and Peace
+                            </h3>
+
+                            <div class="garden-logo-icon-small">
+                                <img src="./assets/images/lotus-icon.png" alt="" width="50%">
+
+                            </div>
+                        </div>
+
+                        <div class="card-right-image flex-shrink-0">
+                            <img src="./assets/images/project-1.jpg" alt="Project Image"
+                                class="rounded-4 object-fit-cover">
+                        </div>
+                    </div>
+
+                    <p class="description-text mt-5 mb-4 pe-md-4 white">
+                        from eco-friendly pratices to innvoative gardening solutions, <br> everythink We do is rooted in
+                        our love for the earth. </p>
+
+                    <hr class="card-divider">
+
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                        <div class="meta-data">
+                            <span class="d-block meta-title mb-1">Location</span>
+                            <span class="d-block white fw-bold">Houston , TX</span>
+                        </div>
+                        <div class="meta-data">
+                            <span class="d-block meta-title mb-1">Time Duration</span>
+                            <span class="d-block white fw-bold">11 Months</span>
+                        </div>
+                        <div class="meta-data">
+                            <span class="d-block meta-title mb-1">Square Meters</span>
+                            <span class="d-block white fw-bold">162,00m&sup2;</span>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+            <div class="mobile-slider-controls d-flex justify-content-center gap-3 d-lg-none mt-3">
+                <button class="btn btn-scroll left-scroll">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="btn btn-scroll right-scroll">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="text-center mt-5" data-aos="zoom-in-up" data-aos-easing="ease-out-back" data-aos-duration="1200" data-aos-delay="150">
+                <button class="btn btn-explore-projects rounded-pill px-5 py-3 fw-bold"> <a href="./project.html"></a>Explore All Projects</button>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- End Recent Project -->
+
+    <!--  Best Faces -->
+    <section class="Faces">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-3 position-relative"  data-aos="fade-up-left" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="450">
+                    <div class="Faces-content-img ">
+                        <img src="./assets/images/face-img-1.jpg" alt="" width="100%" height="300px"
+                            class="rounded-4 object-fit-cover">
+                        <div class="d-flex gap-5 mt-3 faces-hover">
+                            <div class="">
+                                <h4 class="white fw600">Leslie Alexander </h4>
+                                <p class="white">Plant Speciailist</p>
+                            </div>
+                            <div class="faces-icons">
+                                <i class="ri-instagram-line"></i>
+                                <i class="ri-linkedin-fill  ink"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 mtt-1" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1200">
+                    <div class="Faces-content-img ">
+                        <img src="./assets/images/face-img-8.jpg" alt="" width="100%" height="300px"
+                            class="rounded-4 object-fit-cover">
+                        <div class="d-flex gap-5 mt-3 faces-hover">
+                            <div class="">
+                                <h4 class="white fw600">Leslie Alexander </h4>
+                                <p class="white">Plant Speciailist</p>
+                            </div>
+                            <div class="faces-icons">
+                                <i class="ri-instagram-line"></i>
+                                <i class="ri-linkedin-fill  ink"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 mtt-1 position-relative" data-aos="fade-up-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="450">
+                    <div class="Faces-content-img ">
+                        <img src="./assets/images/face-img-2.jpg" alt="" width="100%" height="300px"
+                            class="rounded-4 object-fit-cover">
+                        <div class="d-flex gap-5 mt-3 faces-hover">
+                            <div class="">
+                                <h4 class="white fw600">Leslie Alexander </h4>
+                                <p class="white">Plant Speciailist</p>
+                            </div>
+                            <div class="faces-icons">
+                                <i class="ri-instagram-line"></i>
+                                <i class="ri-linkedin-fill  ink"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3  mtt-1  position-relative mt-4" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="150">
+                    <div class="Faces-content-img ">
+                        <img src="./assets/images/face-img-6.jpg" alt="" width="100%" height="300px"
+                            class="rounded-4 object-fit-cover">
+                        <div class="d-flex gap-5 mt-3 faces-hover">
+                            <div class="">
+                                <h4 class="white fw600">Leslie Alexander </h4>
+                                <p class="white">Plant Speciailist</p>
+                            </div>
+                            <div class="faces-icons">
+                                <i class="ri-instagram-line"></i>
+                                <i class="ri-linkedin-fill  ink"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 text-center mt-5 pt-5" >
+                    <h2 class="fs45 fw600 gradient-text" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1200">The Best Faces <br> Behind The Flourish. </h2>
+                    <a href="./outdoor-plants.html" class="btn mt-4" data-aos="zoom-in" data-aos-delay="400">Explore All Members</a>
+                </div>
+
+
+                <div class="col-md-3 mtt-1  position-relative mt-4" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="300">
+                    <div class="Faces-content-img mbt-5 ">
+                        <img src="./assets/images/face-img-7.jpg" alt="" width="100%" height="300px"
+                            class="rounded-4 object-fit-cover">
+                        <div class="d-flex gap-5 mt-3 faces-hover">
+                            <div class="">
+                                <h4 class="white fw600">Leslie Alexander </h4>
+                                <p class="white">Plant Speciailist</p>
+                            </div>
+                            <div class="faces-icons">
+                                <i class="ri-instagram-line"></i>
+                                <i class="ri-linkedin-fill  ink"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 mtt-1  position-relative mt-4" data-aos="fade-down-left" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="450">
+                    <div class="Faces-content-img ">
+                        <img src="./assets/images/face-img-3.jpg" alt="" width="100%" height="300px"
+                            class="rounded-4 object-fit-cover">
+                        <div class="d-flex gap-5 mt-3 faces-hover">
+                            <div class="">
+                                <h4 class="white fw600">Leslie Alexander </h4>
+                                <p class="white">Plant Speciailist</p>
+                            </div>
+                            <div class="faces-icons">
+                                <i class="ri-instagram-line"></i>
+                                <i class="ri-linkedin-fill  ink"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 mtt-1  position-relative mt-4" data-aos="fade-down" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="150">
+                    <div class="Faces-content-img ">
+                        <img src="./assets/images/face-img-4.jpg" alt="" width="100%" height="300px"
+                            class="rounded-4 object-fit-cover">
+                        <div class="d-flex gap-5 mt-3 faces-hover">
+                            <div class="">
+                                <h4 class="white fw600">Leslie Alexander </h4>
+                                <p class="white">Plant Speciailist</p>
+                            </div>
+                            <div class="faces-icons">
+                                <i class="ri-instagram-line"></i>
+                                <i class="ri-linkedin-fill  ink"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 mtt-1  position-relative mt-4" data-aos="fade-down-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="450">
+                    <div class="Faces-content-img ">
+                        <img src="./assets/images/face-img-5.jpg" alt="" width="100%" height="300px"
+                            class="rounded-4 object-fit-cover">
+                        <div class="d-flex gap-5 mt-3 faces-hover">
+                            <div class="">
+                                <h4 class="white fw600">Leslie Alexander </h4>
+                                <p class="white">Plant Speciailist</p>
+                            </div>
+                            <div class="faces-icons">
+                                <i class="ri-instagram-line"></i>
+                                <i class="ri-linkedin-fill  ink"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Customers Revies  -->
+
+                <div class="customer-reviws">
+                    <div class="row">
+                        <div class="col-md-8 tx " data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="300">
+                            <p class="fs18">//Custmers Review</p>
+                            <h2 class="fs45 gradient-text">From Happy Customers to Thriving Gardens.</h2>
+                        </div>
+
+                        <div class="col-md-4 mt-5" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="300">
+                            <p>Form Blooming to Flourishing vegetable patches, we take pride in helping our customers
+                                achive their gardening dreams.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-section" >
+            <div class="slider-viewport" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1200">
+                <div class="slider-track" id="sliderTrack">
+
+                    <!-- Card 1 -->
+                    <div class="testimonial-card">
+                        <div class="profile-section">
+                            <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
+                                alt="User 1" class="profile-img">
+                        </div>
+                        <div class="divider"></div>
+                        <div class="content-section">
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="quote-text">“Effective collaboration is key to getting things done faster. I am so
+                                glad I reached out, the service is unmatched.”</p>
+                            <div class="author-info">
+                                <div class="author-name">Wade Warren</div>
+                                <div class="author-handle">@wade</div>
+                            </div>
+                            <div class="quote-icon">”</div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="profile-section">
+                            <img src="https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
+                                alt="Esther Howard" class="profile-img">
+                        </div>
+                        <div class="divider"></div>
+                        <div class="content-section">
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="quote-text">“The team transformed my backyard into a vibrant garden oasis. I
+                                couldn't be happier with the results! The attention to detail and care they put into
+                                every plant is remarkable.”</p>
+                            <div class="author-info">
+                                <div class="author-name">Esther Howard</div>
+                                <div class="author-handle">@esther</div>
+                            </div>
+                            <div class="quote-icon">”</div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="testimonial-card">
+                        <div class="profile-section">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
+                                alt="User 3" class="profile-img">
+                        </div>
+                        <div class="divider"></div>
+                        <div class="content-section">
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="quote-text">“Highly recommend! The entire process from start to finish was
+                                seamless. The outcome exceeded my expectations.”</p>
+                            <div class="author-info">
+                                <div class="author-name">Jenny Wilson</div>
+                                <div class="author-handle">@jenny</div>
+                            </div>
+                            <div class="quote-icon">”</div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="testimonial-card">
+                        <div class="profile-section">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
+                                alt="User 4" class="profile-img">
+                        </div>
+                        <div class="divider"></div>
+                        <div class="content-section">
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="quote-text">“Amazing support and fantastic quality. Will definitely be utilizing
+                                their services again in the near future.”</p>
+                            <div class="author-info">
+                                <div class="author-name">Robert Fox</div>
+                                <div class="author-handle">@robert</div>
+                            </div>
+                            <div class="quote-icon">”</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Bottom Controls -->
+            <div class="controls-wrapper">
+                <button class="nav-btn" id="prevBtn" aria-label="Previous">
+                    <i class="ri-arrow-left-line"></i>
+                </button>
+                <div class="pagination-pill" id="paginationText">
+                    [02 / 04]
+                </div>
+                <button class="nav-btn" id="nextBtn" aria-label="Next">
+                    <i class="ri-arrow-right-line"></i>
+                </button>
+            </div>
+        </div>
+
+
+    <!-- // Get Started Now  -->
+
+            <div class="bg-image">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7 col-lg-8 col-xl-9 mt-5 mvpt-5">
+
+                            <p class="fs18 white "data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="150">// Get Started Now</p>
+                            <h2 class=" fs45 mt-3 white " data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="150">Bring Your Green Dreams <br> To Life <span
+                                    class="daas"></span>
+                                Us Now.</h2>
+
+                            <div class="get-content">
+                                <p class="white" data-aos="fade-up" data-aos-delay="200">Your Parfect Garden awiats - join our growing <br> Community of
+                                    passionate gardeners and get <br> everything you need to succeed. </p>
+                                <a href="./project.html" class="btn mt-4 bg-green01" data-aos="zoom-in" data-aos-delay="400">Get A Quote Now</a>
+                            </div>
+
+
+                        </div>
+
+                        <!-- right content -->
+
+                        <div class="col-md-5 col-lg-4 col-xl-3 mt-5 pt-5 mpt-0 mvmt-0">
+                            <div class="about-content" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="300">
+                                <div class="bg-ltgreen01" >
+                                    <p class="text-center ">Project</p>
+                                </div>
+                                <div class="card p-1 card01" >
+                                    <img src="assets/images/seed-plant.png" alt="seeds">
+                                    <h2 > <span class="fs45 ms-3 counter " data-target="450"> 0</span> +</h2>
+                                    <p class="ms-3">Woldwide over 440 <br> Completed project</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- End Get started -->
+
+
+    <!-- // Our Insights -->
+
+    <section class="insights">
+        <div class="container">
+            <div class="row pt-100">
+                <div class="col-md-6 col-lg-5 mt-100">
+                    <p class="fs18 mt-50" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="300">// Our Insights</p>
+                    <h2 class="fs40 gradient-text" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="300">Read Our Articles <br> Written By Professional.</h2>
+                    <p data-aos="fade-up " data-aos-delay="200" class="mbt-2">We believe that gardening is more just planting seeds; <br> it's about nurturing life , fostering
+                        connection. </p>
+                    <a href="./blogs.html" class="btn mtt-1" data-aos="zoom-in" data-aos-delay="400">Explore All Blogs</a>
+                </div>
+
+                <div class="col-md-6 col-lg-7 p-5 mpt-1 mbt-5" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="300">
+                    <div class="card02 bg-white">
+                        <img src="assets/images/green-home.png" alt="home" width="100%">
+                        <div class="d-flex gap-3 mt-4 align-items-center">
+                            <span class="bg-green01">Plant Care</span>
+                            <span>Sep 05, 2024</span>
+                        </div>
+                        <h2 class="mt-4">From Seed to Bloom:Mastering the Art of Flower Gardening</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+    </section>
+
+
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12  col-md-12 col-lg-6 col-xl-6 " data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="300">
+                    <span class="white fs-4 mbt-5 ">NewSletter</span>
+                    <div class="input-filled mt-3">
+                        <input type="text" placeholder="Enter your Email...">
+                        <i class="ri-arrow-right-up-line"></i>
+                    </div>
+                    <p class="gray mt-4">Stay Tuned And Subcribe to Our <br> Newslatter. </p>
+                </div>
+
+
+                <div class=" col-6 col-sm-6   col-md-4 col-lg-2  col-xl-2 tvmt-5" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1200">
+                    <h2 class="white mb-5 mbt-5 ">Main Pages</h2>
+
+                    <a href="./index.html" class="active" data-aos="fade-up" data-aos-delay="200"> Home</a>
+                    <a href="./about-us.html" data-aos="fade-up" data-aos-delay="200">About Us</a>
+                    <a href="./project.html" data-aos="fade-up" data-aos-delay="200">Projects</a>
+                    <a href="./contect.html" data-aos="fade-up" data-aos-delay="200">Contect </a>
+                    <a href="./services.html" data-aos="fade-up" data-aos-delay="200">Services </a>
+                    <a href="./blogs.html" data-aos="fade-up" data-aos-delay="200">Blog </a>
+                </div>
+
+                <div class=" col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2 tvmt-5" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1200">
+                    <h2 class="white mb-5 mbt-5 ">Company</h2>
+
+                    <a href="#" data-aos="fade-up" data-aos-delay="200"> Service Single</a>
+                    <a href="#" data-aos="fade-up" data-aos-delay="200">Blog Single</a>
+                    <a href="#" data-aos="fade-up" data-aos-delay="200">Pricing </a>
+                    <a href="#" data-aos="fade-up" data-aos-delay="200">Pricing Single </a>
+                    <a href="#" data-aos="fade-up" data-aos-delay="200">Projects</a>
+                    <a href="#" data-aos="fade-up" data-aos-delay="200">Project Single </a>
+                </div>
+
+                <div class=" col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2 tvmt-5 " data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="300">
+                    <h2 class="white mb-5 mbt-5 ">Templetes</h2>
+
+                    <a href="#" data-aos="fade-up" data-aos-delay="200"> 404 Not Found</a>
+                    <a href="#" data-aos="fade-up" data-aos-delay="200">Password Protected </a>
+                    <a href="#" data-aos="fade-up" data-aos-delay="200">Changelog </a>
+                    <a href="#" data-aos="fade-up" data-aos-delay="200">Licence</a>
+                    <a href="#" data-aos="fade-up" data-aos-delay="200">Style Guide </a>
+                </div>
+
+
+                <div class="col-md-6 col-lg-4 mt-100" data-aos="zoom-in" data-aos-delay="400">
+                    <p>Email Us</p>
+                    <span>info.zaigreen@gmail.com</span>
+                </div>
+
+
+                <div class="col-md-6 col-lg-4  mt-100" data-aos="zoom-in" data-aos-delay="400">
+                    <p>Location</p>
+                    <span>174 Streel Charleston , New Work</span>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mt-100 " data-aos="zoom-in" data-aos-delay="400">
+
+                    <p class="ms-5 ps-5 ml"> Call us Now </p>
+                    <span class="ms-5 ps-5 ml">(+880) 89993 88750</span>
+                </div>
+
+                <div class="footer-bottom mt-100">
+                    <div class="footer-logo mt-4 d-flex align-items-center">
+                        <img src="assets/images/footer-logo.png" alt="logo" width="50px"
+                            class="logo"><span>Zaigreen</span>
+                    </div>
+                    <div class="row mt-5">
+
+                        <div class="col-md-6 buttons">
+                            <button>Facebook</button>
+                            <button>Instagram</button>
+                            <button class="mtt-1">Linkedin</button>
+                            <button class=" medium-btn mtt-1 ">Medium</button>
+                        </div>
+
+                        <div class="col-md-6 text-end mtt-1">
+                            <span>Copyright - Zaigreen | Designed by <a href="#">Flowzai /</a></span><a
+                                href="#">Licenseing</a> <br>
+                            <span>-Powered by <a href="#">Webflow </a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="./assets/js/main.js"></script>
+
+</html>

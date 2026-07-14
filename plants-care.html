@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Care Kits - Zaigreen</title>
+
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* Color Palette & Variables based on Zaigreen Theme */
+        :root {
+            --primary-dark: #023328;
+            --primary-light: #b3ffb3;
+            --bg-beige: #f5f3ee;
+            --text-dark: #1a1a1a;
+            --text-muted: #555555;
+            --border-radius-lg: 24px;
+            --border-radius-sm: 12px;
+        }
+
+        body,
+        html {
+            background-color: var(--bg-beige);
+            color: var(--text-dark);
+            font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+            overflow-x: clip;
+        }
+
+        .offcanvas .fa-shopping-cart {
+            color: #b4f3ce !important;
+        }
+
+        header {
+            z-index: 99;
+            background-color: rgb(242, 238, 238);
+
+        }
+
+        .fa-shopping-cart {
+            color: #165861 !important;
+        }
+
+        .custom-navbar {
+            padding: 15px 20px;
+        }
+
+        h2,
+        h3,
+        h4,
+        h5 {
+
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            color: #1a3a38;
+        }
+
+        .active-1 {
+            color: #165861 !important;
+            border-bottom: solid 1px #143c41;
+        }
+
+        .navbar-brand {
+            color: #143c41;
+            font-weight: 700;
+            font-size: 1.5rem;
+            align-items: center;
+            display: flex;
+            /* gap: 10px; */
+        }
+
+
+
+        .navbar-brand i {
+            color: var(--primary);
+        }
+
+        nav .nav-link {
+            color: #165861 !important;
+            font-size: 0.95rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+            font-weight: 600;
+            transition: 0.5s;
+        }
+
+        .dropdown-menu {
+            background-color: #143c41;
+            padding: 7px;
+            border-radius: 5px;
+            display: none;
+            transition: 0.5s;
+            color: #143c41 !important;
+        }
+
+
+
+        .dropdown-item {
+            color: white;
+            font-size: 14px;
+        }
+
+
+        .nav-link:hover {
+            color: #59e2a8 !important;
+            transform: translateX(2px);
+        }
+
+        .nav-icons i {
+            color: white;
+            margin-right: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .nav-icons i:hover {
+            color: var(--primary);
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 600;
+        }
+
+
+        .navbar-brand span {
+            font-size: 30px;
+            font-family: 'Poppins', sans-serif !important;
+            font-weight: 600;
+
+        }
+
+        .logo {
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+        }
+
+        .premium-menu-style {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.06);
+            padding: 0.75rem 0;
+        }
+
+        .premium-menu-style .dropdown-item {
+            padding: 0.6rem 1.5rem;
+            font-size: 0.95rem;
+            position: relative;
+            background: transparent !important;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .premium-menu-style .dropdown-item:hover {
+            color: #b9fdd5 !important;
+            transform: translateX(6px);
+        }
+
+        .offcanvas-title span {
+            font-weight: 700;
+        }
+
+
+
+        /* Dropdown Arrow Rotation Animation */
+        .arrow {
+            display: inline-block !important;
+            transition: transform 0.3s ease-in-out !important;
+        }
+
+        .rotate-up {
+            transform: rotate(180deg) !important;
+        }
+
+
+
+        .offcanvas .offcanvas-title img {
+            border-radius: 50%;
+            height: 40px;
+            width: 40px;
+        }
+
+        .offcanvas .offcanvas-title span {
+            color: #b4f3ce;
+        }
+
+        .offcanvas {
+            color: #b4f3ce;
+        }
+
+        .offcanvas .active-1 {
+            color: #b4f3ce !important;
+            border-bottom: solid 1px #b4f3ce;
+        }
+
+        /* ==== End Navbar ==== */
+
+
+
+        .gradient-text {
+            background: linear-gradient(90deg, #ffff, #032b30, #c9fde7);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 4s linear infinite;
+        }
+
+        @keyframes shine {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        .btn {
+            background-color: #143c41;
+            color: #b4f3ce;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(20, 60, 65, 0.4);
+            color: #143c41
+        }
+
+        .btn:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 5px rgba(20, 60, 65, 0.4);
+        }
+
+        /* --- Buttons & Tags --- */
+        .btn-primary-custom {
+            background-color: var(--primary-dark);
+            color: white;
+            border-radius: 50px;
+            padding: 10px 24px;
+            font-weight: 500;
+            border: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary-custom:hover {
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(2, 51, 40, 0.2);
+            /* Background completely static on hover */
+        }
+
+        .btn-outline-custom {
+            background-color: white;
+            color: var(--primary-dark);
+            border: 1px solid var(--primary-dark);
+            border-radius: 50px;
+            padding: 8px 20px;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn-outline-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(2, 51, 40, 0.1);
+            /* Background remains entirely static on hover */
+        }
+
+        .tag-light {
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+
+        /* --- Page Header --- */
+        .page-header {
+            padding: 60px 0 40px 0;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* --- Sidebar --- */
+        .shop-sidebar {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            padding: 30px;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            margin-bottom: 30px;
+        }
+
+        .sidebar-title {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--bg-beige);
+            padding-bottom: 10px;
+        }
+
+        .filter-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .filter-list li {
+            margin-bottom: 12px;
+        }
+
+        .filter-list a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .filter-list a:hover,
+        .filter-list a.active {
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+
+        /* --- Product Cards (Premium Static Hover) --- */
+        .product-card {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            padding: 20px;
+            height: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(2, 51, 40, 0.08);
+            /* Background remains static white */
+        }
+
+        .product-img-wrapper {
+            width: 100%;
+            height: 220px;
+            border-radius: var(--border-radius-sm);
+            overflow: hidden;
+            margin-bottom: 20px;
+            background-color: var(--bg-beige);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-title {
+            font-size: 1.25rem;
+            color: var(--primary-dark);
+            text-decoration: none;
+            margin-bottom: 8px;
+            display: block;
+            font-weight: 700;
+        }
+
+        .product-price {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .product-actions {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .cart-btn-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+        }
+
+        .cart-btn-icon:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            /* Background remains static on hover */
+        }
+
+
+
+
+        .about-breadcrumb {
+            display: inline-flex;
+            background-color: #033040;
+            padding: 10px 24px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(7, 55, 63, 0.05);
+            /* Very subtle shadow */
+            margin-bottom: 25px;
+        }
+
+        .about-breadcrumb .breadcrumb {
+            margin-bottom: 0;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .about-breadcrumb .breadcrumb-item a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .about-breadcrumb .breadcrumb-item a:hover {
+            color: #b4f3ce;
+        }
+
+        .about-breadcrumb .breadcrumb-item.active {
+            color: #59e2a8;
+            font-weight: 700;
+        }
+
+        .about-breadcrumb .breadcrumb-item+.breadcrumb-item::before {
+            content: "\F285";
+            font-family: "bootstrap-icons";
+            color: var(--accent-green);
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 0 12px;
+            vertical-align: middle;
+            margin-top: 3px;
+        }
+
+        /* === Footer === */
+
+        footer {
+            padding-top: 100px;
+            padding-bottom: 30px;
+            background-color: #033040;
+            font-family: 'Poppins', sans-serif !important;
+        }
+
+        .input-filled {
+            width: 60%;
+            position: relative;
+        }
+
+
+        .input-filled input {
+            background-color: white;
+            padding: 20px;
+            border-radius: 50px;
+            border: none;
+            box-sizing: border-box;
+        }
+
+        .input-filled i {
+            background-color: #033040;
+            color: #a5f5c8;
+            padding: 13px;
+            border-radius: 50%;
+            margin-left: -60px;
+            font-size: 25px !important;
+            font-weight: 600;
+        }
+
+        footer a {
+            color: #8aafc0 !important;
+            text-decoration: none;
+            margin-bottom: 1.5rem;
+            font-size: 17px;
+            display: block;
+            font-weight: 500;
+            position: relative;
+            transition: color 1s ease, transform 1s ease, padding-left 0.5s ease !important;
+        }
+
+
+        footer a:hover {
+            color: #a5f5c8 !important;
+            padding-left: 14px;
+        }
+
+        footer a:hover::before {
+            transform: translateY(-50%) scaleY(1);
+        }
+
+        footer p {
+            color: #8aafc0 !important;
+            font-weight: 500;
+        }
+
+        footer .active {
+            color: #a3f7bf !important;
+        }
+
+        footer span {
+            color: white;
+            font-size: 22px;
+        }
+
+        .footer-bottom {
+            background-color: #a5f5c8;
+            padding: 20px;
+            border-radius: 10px;
+            padding-bottom: 50px;
+        }
+
+
+        .footer-bottom .footer-logo span {
+            font-weight: 600;
+            font-size: 35px !important;
+            margin-left: 10px;
+            color: #032b30;
+        }
+
+        .buttons button {
+            transition: 0.5s !important;
+        }
+
+        .buttons button:hover {
+            color: #a5f5c8;
+            transform: translateY(-5px);
+        }
+
+
+        .footer-bottom button {
+            background-color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            border: none;
+            margin-left: 8px;
+        }
+
+        .footer-bottom a {
+            text-decoration: underline;
+            display: inline;
+            color: #032b30 !important;
+
+        }
+
+        .footer-bottom span {
+            color: #032b30;
+            font-size: 16px !important;
+        }
+
+        .white {
+            color: white !important;
+        }
+
+        .mt-100 {
+            margin-top: 100px;
+        }
+
+        .blue {
+            color: #033040 !;
+        }
+
+        /* === End  Footer === */
+
+
+
+
+
+
+        /* ======== Media Query =============
+        =========== Mobile responsive ====== */
+
+        @media (max-width: 415px) {
+
+            .input-filled {
+                width: 90%;
+            }
+        }
+
+        @media (min-width: 416px) and (max-width:576px) {
+            .input-filled {
+                width: 70%;
+            }
+        }
+
+
+
+        @media (max-width: 576px) {
+
+            .about-breadcrumb .breadcrumb-item+.breadcrumb-item::before {
+                padding: 0px 5px !important;
+            }
+
+
+            .page-header h1 {
+                font-size: 47px;
+                margin-top: 50px;
+            }
+
+            /* ==  Footer == */
+
+            
+
+            .ml {
+                margin-left: 0px !important;
+                padding-left: 0px !important;
+            }
+
+            .footer-bottom .text-end {
+                text-align: start !important;
+            }
+
+            .mtt-1 {
+                margin-top: 1rem;
+            }
+        }
+
+        @media (min-width: 577px) and (max-width:767px) {
+
+            .page-header h1 {
+                font-size: 50px;
+                margin-top: 50px;
+            }
+
+            /* ==  Footer == */
+
+          
+
+            .ml {
+                margin-left: 0px !important;
+                padding-left: 0px !important;
+            }
+
+            .footer-bottom .text-end {
+                text-align: start !important;
+            }
+
+            .mtt-1 {
+                margin-top: 1rem;
+            }
+
+            /* === End footer  === */
+        }
+
+        @media (min-width: 768px) and (max-width:991px) {
+
+            .page-header h1 {
+                font-size: 50px;
+                margin-top: 50px;
+            }
+
+            /* ==  footer == */
+
+            .tvmt-5 {
+                margin-top: 3rem;
+            }
+
+            .ml {
+                margin-left: 0px !important;
+                padding-left: 0px !important;
+            }
+
+            .mtt-1 {
+                margin-top: 1rem;
+            }
+
+        }
+
+        @media (max-width: 991px) {
+
+
+            .cards-wrapper {
+                justify-content: center;
+            }
+
+            .offcanvas-title span {
+                color: #9feeb5 !important;
+            }
+
+            .quote-card,
+            .panels-container,
+            .live-card {
+                margin-top: 20px;
+            }
+
+            .main-heading {
+                font-size: 2.8rem;
+            }
+
+            .offcanvas {
+                background-color: #033040;
+                border-left: none;
+                box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+            }
+
+            .custom-offcanvas-header {
+                background-color: #f4f8f4;
+                padding: 1.25rem 1.5rem;
+            }
+
+            .custom-offcanvas-header .text-success {
+                color: #20774b !important;
+            }
+
+            .custom-nav-item {
+                border-bottom: 1px solid #f0f0f0;
+            }
+
+            .custom-nav-item:last-child {
+                border-bottom: none;
+            }
+
+            .offcanvas-body .nav-link {
+                color: #a3f7bf !important;
+                /* Dark charcoal text */
+                padding: 16px 0;
+                font-size: 1.1rem;
+                transition: color 0.2s ease;
+            }
+
+            .offcanvas-body .nav-link.active-mobile {
+                color: #20774b !important;
+                position: relative;
+            }
+
+            .offcanvas-body .nav-link.active-mobile::after {
+                content: '';
+                position: absolute;
+                bottom: -1px;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: #20774b;
+            }
+
+            .dropdown-arrow {
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .nav-link.custom-toggle[aria-expanded="true"] .dropdown-arrow {
+                transform: rotate(180deg);
+                color: #20774b;
+            }
+
+            .offcanvas-body .dropdown-menu {
+                margin-top: 0;
+                border-radius: 0;
+            }
+
+            .custom-dropdown-item {
+                color: #4a5568 !important;
+                padding: 10px 0;
+                font-size: 1rem;
+                transition: padding-left 0.3s ease, color 0.3s ease;
+            }
+
+            .custom-dropdown-item:hover,
+            .custom-dropdown-item:focus {
+                background-color: transparent;
+                color: #20774b !important;
+                padding-left: 5px;
+            }
+
+            .btn-close:focus,
+            .navbar-toggler:focus,
+            .nav-link:focus {
+                box-shadow: none !important;
+                outline: none !important;
+            }
+
+            .dropdown-menu {
+                background-color: #143c41 !important;
+                padding: 7px 26px !important;
+                border-radius: 5px !important;
+                transition: 0.5s;
+                color: #143c41 !important;
+            }
+
+            .dropdown-item {
+                color: white;
+                font-size: 20px;
+            }
+
+            .dropdown-item:hover {
+                background-color: #a3f7bf;
+                color: #033040;
+            }
+        }
+
+        @media(min-width:992px) and (max-width:1200px) {
+
+
+            .page-header h1 {
+                font-size: 45px;
+                margin-top: 50px;
+            }
+
+            /* -- Header -- */
+
+            .navbar-brand {
+                gap: 0px;
+            }
+
+            .navbar-brand span {
+                font-size: 25px;
+            }
+
+            /* --- footer --- */
+            footer .ms-5 {
+                margin-left: 0px !important;
+            }
+
+            footer .medium-btn {
+                margin-top: 10px;
+            }
+        }
+
+        select {
+            cursor: pointer;
+        }
+
+        .active-3 {
+            color: #a5f5c8 !important;
+            /* border-bottom: solid 1px #a5f5c8; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="pt-3 sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg custom-navbar align-items-center">
+                <!-- Brand -->
+                <a class="navbar-brand d-flex align-items-center" href="./index.html">
+                    <img src="./assets/images/header-logo.png" alt="logo" class="logo me-2">
+                    <span class="">Zaigreen</span>
+                </a>
+
+                <!-- Mobile Toggler -->
+                <button class="navbar-toggler border-0 shadow-none blue" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <i class="fas fa-bars fs-3"></i>
+                </button>
+
+                <!-- Desktop Menu -->
+                <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link " href="./index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link " href="./about-us.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link dropdown " href="./project.html">Project</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <!-- custom-toggle par aria-expanded Bootstrap khud change karta hai -->
+                            <a class="nav-link active-1 custom-toggle d-flex align-items-center" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Pages <i class="ri-arrow-down-s-line ms-1 arrow"></i>
+                            </a>
+
+                            <ul class="dropdown-menu premium-menu-style click-effect-menu">
+                                <li><a class="dropdown-item " href="./indoor-plants.html">Indoor Plants</a></li>
+                                <li><a class="dropdown-item" href="./outdoor-plants.html">Outdoor Plants</a></li>
+                                <li><a class="dropdown-item active-3" href="./plants-care.html">Plant Care Kits</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link " href="./blogs.html">Blogs</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center nav-icons">
+                        <a class="nav-link" href="./cart.html"><i class="fas fa-shopping-cart me-1"></i> Cart(0)</a>
+                        <a href="#" class="btn btn-primary-custom ms-4">Get a Quote</a>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Mobile Offcanvas Menu -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header border-bottom-custom">
+                    <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasNavbarLabel">
+                        <img src="./assets/images/logo.png" alt="logo" width="40px" class="me-2">
+                        <span class="text-white ">Zaigreen</span>
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column">
+                    <ul class="navbar-nav flex-grow-1 pe-3">
+                        <li class="nav-item"><a class="nav-link fs-5 " href="./index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5 " href="./about-us.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5 " href="./project.html">Project</a></li>
+                        <li class="nav-item dropdown">
+
+                            <a class="nav-link active-1 custom-toggle d-flex align-items-center" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Pages <i class="ri-arrow-down-s-line ms-1 arrow"></i>
+                            </a>
+
+                            <ul class="dropdown-menu premium-menu-style click-effect-menu">
+                                <li><a class="dropdown-item" href="./indoor-plants.html">Indoor Plants</a></li>
+                                <li><a class="dropdown-item" href="./outdoor-plants.html">Outdoor Plants</a></li>
+                                <li><a class="dropdown-item active-3" href="./plants-care.html">Plant Care Kits</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="./blogs.html">Blogs</a></li>
+                    </ul>
+
+                    <div class="mt-auto pb-4 pt-3 border-top-custom">
+                        <a class="nav-link text-white d-flex align-items-center mb-3 fs-5" href="./cart.html">
+                            <i class="fas fa-shopping-cart me-2"></i> Cart (0)
+                        </a>
+                        <a href="#" class="btn btn-primary-custom w-100 py-3 fw-bold text-uppercase rounded-3">Get a
+                            Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- End Haeder -->
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <nav aria-label="breadcrumb" class="about-breadcrumb" data-aos="fade-up" data-aos-delay="200">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="index.html"><i class="bi bi-house-door-fill me-1"></i> Home</a>c
+                    </li>
+                    <li class="breadcrumb-item text-white" aria-current="page">Pages</li>
+                    <li class="breadcrumb-item active" aria-current="page">Plant Care Kits</li>
+                </ol>
+            </nav>
+            <h1 class="gradient-text mt-4" data-aos="fade-left" data-aos-easing="ease-out-cubic"
+                data-aos-duration="1200" data-aos-delay="150">Plant Care Kits.</h1>
+            <p class="text-muted w-50 mx-auto" data-aos="fade-right" data-aos-easing="ease-out-cubic"
+                data-aos-duration="1200" data-aos-delay="150">Equip yourself with the best premium tools, organic
+                fertilizers, and care essentials to keep your garden thriving.</p>
+        </div>
+    </section>
+
+    <!-- Shop Layout Section -->
+    <section class="py-4 mb-5">
+        <div class="container">
+            <div class="row">
+
+                <!-- Sidebar (Filters) -->
+                <div class="col-lg-3">
+
+                    <!-- Search -->
+                    <div class="shop-sidebar p-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="input-group">
+                            <input type="text" class="form-control border-0 bg-light" placeholder="Search care kits...">
+                            <button class="btn bg-light text-dark border-0" type="button"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="shop-sidebar">
+                        <h4 class="sidebar-title" data-aos="fade-right" data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1200" data-aos-delay="150">Categories</h4>
+                        <ul class="filter-list">
+                            <li data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200"
+                                data-aos-delay="150"><a href="#" class="active"><span>All Care Kits</span>
+                                    <span>(34)</span></a></li>
+                            <li data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200"
+                                data-aos-delay="150"><a href="#"><span>Gardening Tools</span> <span>(12)</span></a></li>
+                            <li data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200"
+                                data-aos-delay="150"><a href="#"><span>Organic Fertilizers</span> <span>(08)</span></a>
+                            </li>
+                            <li data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200"
+                                data-aos-delay="150"><a href="#"><span>Pest Control</span> <span>(06)</span></a></li>
+                            <li data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200"
+                                data-aos-delay="150" data-aos="fade-right" data-aos-easing="ease-out-cubic"
+                                data-aos-duration="1200" data-aos-delay="150"><a href="#"><span>Watering & Soil</span>
+                                    <span>(08)</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Price Filter -->
+                    <div class="shop-sidebar">
+                        <h4 class="sidebar-title" data-aos="fade-right" data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1200" data-aos-delay="150">Filter by Price</h4>
+                        <ul class="filter-list">
+                            <li data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200"
+                                data-aos-delay="150"><a href="#">Under $15</a></li>
+                            <li data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200"
+                                data-aos-delay="150"><a href="#">$15 - $40</a></li>
+                            <li data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200"
+                                data-aos-delay="150"><a href="#">$40 - $80</a></li>
+                            <li data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200"
+                                data-aos-delay="150"><a href="#">Over $80</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+
+                <!-- Products Grid -->
+                <div class="col-lg-9">
+
+                    <!-- Sorting Header -->
+                    <div class="d-flex justify-content-between align-items-center mb-4" data-aos="zoom-in"
+                        data-aos-easing="ease-out-back" data-aos-duration="1200" data-aos-delay="0">
+                        <p class="mb-0 text-muted">Showing 1-6 of 34 results</p>
+                        <select class="form-select w-auto border-0 shadow-sm rounded-pill px-4">
+                            <option selected>Default Sorting</option>
+                            <option value="1">Sort by Popularity</option>
+                            <option value="2">Sort by Latest</option>
+                            <option value="3">Sort by Price: Low to High</option>
+                            <option value="4">Sort by Price: High to Low</option>
+                        </select>
+                    </div>
+
+                    <div class="row g-4">
+
+                        <!-- Product 1 -->
+                        <div class="col-md-6 col-lg-4" data-aos="fade-right" data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1200" data-aos-delay="150">
+                            <div class="product-card">
+                                <div class="product-img-wrapper">
+                                    <img src="./assets/images/Beginner-Pruning-Kit.jpg" alt="Beginner Pruning Kit">
+                                </div>
+                                <a href="#" class="product-title">Beginner Pruning Set</a>
+                                <p class="text-muted small mb-2">Gardening Tools • Stainless Steel</p>
+                                <div class="product-price">$28.00</div>
+                                <div class="product-actions">
+                                    <button class="btn-outline-custom w-100 me-2">Buy Now</button>
+                                    <button class="cart-btn-icon"><i class="fa-solid fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1200" data-aos-delay="150">
+                            <div class="product-card">
+                                <div class="product-img-wrapper">
+                                    <img src="./assets/images/Organic-Fertilizer-Bundle.jpg"
+                                        alt="Organic Fertilizer Bundle">
+                                </div>
+                                <a href="#" class="product-title">Organic Plant Food</a>
+                                <p class="text-muted small mb-2">Fertilizers • 100% Natural</p>
+                                <div class="product-price">$18.50</div>
+                                <div class="product-actions">
+                                    <button class="btn-outline-custom w-100 me-2">Buy Now</button>
+                                    <button class="cart-btn-icon"><i class="fa-solid fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 3 -->
+                        <div class="col-md-6 col-lg-4" data-aos="fade-left" data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1200" data-aos-delay="150">
+                            <div class="product-card">
+                                <div class="product-img-wrapper">
+                                    <img src="./assets/images/Premium-Watering-Can.jpg" alt="Premium Watering Can">
+                                </div>
+                                <a href="#" class="product-title">Copper Watering Can</a>
+                                <p class="text-muted small mb-2">Watering • 2 Liter Capacity</p>
+                                <div class="product-price">$45.00</div>
+                                <div class="product-actions">
+                                    <button class="btn-outline-custom w-100 me-2">Buy Now</button>
+                                    <button class="cart-btn-icon"><i class="fa-solid fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 4 -->
+                        <div class="col-md-6 col-lg-4" data-aos="fade-right" data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1200" data-aos-delay="150">
+                            <div class="product-card">
+                                <div class="product-img-wrapper">
+                                    <img src="./assets/images/Soil-Care-Bundle.jpg" alt="Soil Care Bundle">
+                                </div>
+                                <a href="#" class="product-title">Premium Potting Mix</a>
+                                <p class="text-muted small mb-2">Soil & Compost • Nutrient Rich</p>
+                                <div class="product-price">$14.00</div>
+                                <div class="product-actions">
+                                    <button class="btn-outline-custom w-100 me-2">Buy Now</button>
+                                    <button class="cart-btn-icon"><i class="fa-solid fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 5 -->
+                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1200" data-aos-delay="150">
+                            <div class="product-card">
+                                <div class="product-img-wrapper">
+                                    <img src="./assets/images/Neem-Oil-Kit.jpg" alt="Neem Oil Kit">
+                                </div>
+                                <a href="#" class="product-title">Natural Neem Oil Spray</a>
+                                <p class="text-muted small mb-2">Pest Control • Eco-Friendly</p>
+                                <div class="product-price">$12.50</div>
+                                <div class="product-actions">
+                                    <button class="btn-outline-custom w-100 me-2">Buy Now</button>
+                                    <button class="cart-btn-icon"><i class="fa-solid fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 6 -->
+                        <div class="col-md-6 col-lg-4" data-aos="fade-left" data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1200" data-aos-delay="150">
+                            <div class="product-card">
+                                <div class="product-img-wrapper">
+                                    <img src="./assets/images/Master-Gardener-Tool-Kit.jpg"
+                                        alt="Master Gardener Tool Kit">
+                                </div>
+                                <a href="#" class="product-title">Master Gardener Kit</a>
+                                <p class="text-muted small mb-2">Complete Set • 7 Pieces</p>
+                                <div class="product-price">$65.00</div>
+                                <div class="product-actions">
+                                    <button class="btn-outline-custom w-100 me-2">Buy Now</button>
+                                    <button class="cart-btn-icon"><i class="fa-solid fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="mt-5 pt-3">
+                        <nav aria-label="Page navigation" data-aos="fade-up" data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1200" data-aos-delay="150">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled">
+                                    <a class="page-link text-muted border-0 bg-transparent" href="#" tabindex="-1"><i
+                                            class="fa-solid fa-arrow-left me-2"></i></a>
+                                </li>
+                                <li class="page-item"><a
+                                        class="page-link rounded-circle mx-1 text-dark fw-bold border-0 shadow-sm"
+                                        href="#">1</a></li>
+                                <li class="page-item"><a
+                                        class="page-link rounded-circle mx-1 text-muted border-0 bg-transparent"
+                                        href="#">2</a></li>
+                                <li class="page-item"><a
+                                        class="page-link rounded-circle mx-1 text-muted border-0 bg-transparent"
+                                        href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link text-dark fw-bold border-0 bg-transparent" href="#"><i
+                                            class="fa-solid fa-arrow-right ms-2"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12  col-md-12 col-lg-6 col-xl-6 " data-aos="fade-right"
+                    data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="300">
+                    <span class="white fs-4 mbt-5 ">NewSletter</span>
+                    <div class="input-filled mt-3">
+                        <input type="text" placeholder="Enter your Email...">
+                        <i class="ri-arrow-right-up-line"></i>
+                    </div>
+                    <p class="gray mt-4">Stay Tuned And Subcribe to Our <br> Newslatter. </p>
+                </div>
+
+
+                <div class=" col-6 col-sm-6   col-md-4 col-lg-2  col-xl-2 tvmt-5" data-aos="fade-up"
+                    data-aos-easing="ease-out-cubic" data-aos-duration="1200">
+                    <h2 class="white mb-5 mbt-5 ">Main Pages</h2>
+
+                    <a href="./index.html" data-aos="fade-up" data-aos-delay="200"> Home</a>
+                    <a href="./about-us.html" data-aos="fade-up" data-aos-delay="200">About Us</a>
+                    <a href="./project.html" data-aos="fade-up" data-aos-delay="200">Projects</a>
+                    <a href="./contect.html" data-aos="fade-up" data-aos-delay="200">Contect </a>
+                    <a href="./services.html" data-aos="fade-up" data-aos-delay="200">Services </a>
+                    <a href="./blogs.html" data-aos="fade-up" data-aos-delay="200">Blog </a>
+                </div>
+
+                <div class=" col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2 tvmt-5" data-aos="fade-up"
+                    data-aos-easing="ease-out-cubic" data-aos-duration="1200">
+                    <h2 class="white mb-5 mbt-5 ">Company</h2>
+
+                    <a href="./indoor-plants.html" class="active" data-aos="fade-up" data-aos-delay="200"> Indoor Plants
+                    </a>
+                    <a href="./outdoor-plants.html" data-aos="fade-up" data-aos-delay="200">Outdoor Plants</a>
+                    <a href="./plants-care.html" data-aos="fade-up" data-aos-delay="200">Plant Care kits </a>
+                    <a href="#" data-aos="fade-up" data-aos-delay="200">Pricing Single </a>
+                    <a href="./project.html" data-aos="fade-up" data-aos-delay="200">Projects </a>
+                    <a href="#" data-aos="fade-up" data-aos-delay="200">Project Single </a>
+                </div>
+
+                <div class=" col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2 tvmt-5 " data-aos="fade-left"
+                    data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="300">
+                    <h2 class="white mb-5 mbt-5 ">Templetes</h2>
+
+                    <a href="#" data-aos="fade-up" data-aos-delay="200"> 404 Not Found</a>
+                    <a href="#" data-aos="fade-up" data-aos-delay="200">Password Protected </a>
+                    <a href="#" data-aos="fade-up" data-aos-delay="200">Changelog </a>
+                    <a href="#" data-aos="fade-up" data-aos-delay="200">Licence</a>
+                    <a href="#" data-aos="fade-up" data-aos-delay="200">Style Guide </a>
+                </div>
+
+
+                <div class="col-md-6 col-lg-4 mt-100" data-aos="zoom-in" data-aos-delay="400">
+                    <p>Email Us</p>
+                    <span>info.zaigreen@gmail.com</span>
+                </div>
+
+
+                <div class="col-md-6 col-lg-4  mt-100" data-aos="zoom-in" data-aos-delay="400">
+                    <p>Location</p>
+                    <span>174 Streel Charleston , New Work</span>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mt-100 " data-aos="zoom-in" data-aos-delay="400">
+
+                    <p class="ms-5 ps-5 ml"> Call us Now </p>
+                    <span class="ms-5 ps-5 ml">(+880) 89993 88750</span>
+                </div>
+
+                <div class="footer-bottom mt-100">
+                    <div class="footer-logo mt-4 d-flex align-items-center">
+                        <img src="assets/images/footer-logo.png" alt="logo" width="50px"
+                            class="logo"><span>Zaigreen</span>
+                    </div>
+                    <div class="row mt-5">
+
+                        <div class="col-md-6 buttons">
+                            <button>Facebook</button>
+                            <button>Instagram</button>
+                            <button class="mtt-1">Linkedin</button>
+                            <button class=" medium-btn mtt-1 ">Medium</button>
+                        </div>
+
+                        <div class="col-md-6 text-end mtt-1">
+                            <span>Copyright - Zaigreen | Designed by <a href="#">Flowzai /</a></span><a
+                                href="#">Licenseing</a> <br>
+                            <span>-Powered by <a href="#">Webflow </a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script>
+        //===  fade animations === //
+
+        AOS.init({
+            duration: 1000,
+            once: false,
+            offset: 50,
+            easing: 'ease-in-out-back'
+        });
+
+
+        // === Header arrow  === //
+        $(document).ready(function () {
+            $('.dropdown').click(function () {
+                $('.dropdown-list').toggle();
+
+                $(this).find('.arrow').toggleClass('rotate-up');
+            });
+        });
+    </script>
+</body>
+
+</html>
